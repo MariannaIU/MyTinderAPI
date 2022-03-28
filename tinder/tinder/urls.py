@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tinder_app.views import MemberListView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/list', MemberListView.as_view()),
+
 ]
